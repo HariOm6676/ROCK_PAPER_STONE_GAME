@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="resources/images/favicon.ico">
+    <link rel="stylesheet" href="resources/styles/rps.css">
+    <script src="resources/scripts/rps.js"></script>
+
+    <title>Rock Paper and Scissors </title>
+</head>
+
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <div id="buttons-container">
+        <button onclick="userMove='Rock'; 
+        generateComputerMove();
+        evaluateMoves();
+        console.log('userMove ${userMove} computerMove ${computerMove} result: ${result}') ;">
+
+
+            <img src="resources/images/rock.png" alt="rock">
+        </button>
+        <button
+            onclick="userMove='Paper'; generateComputerMove(); evaluateMoves(); console.log('userMove: ${userMove} computerMove: ${computerMove} result: ${result}' );">
+            <img src="resources/images/paper.png" alt="paper">
+        </button>
+        <button
+            onclick="userMove='Scissors'; generateComputerMove(); evaluateMoves(); console.log('userMove ${userMove} computerMove ${computerMove} result ${result}');">
+            <img src="resources/images/scissors.png" alt="scissors">
+        </button>
+        <button
+            onclick="userMove='Reset'; generateComputerMove(); evaluateMoves(); console.log('userMove ${userMove} computerMove ${computerMove} result ${result}');">
+            <img id="reset-img" src="resources/images/reset.jpg" alt="reset">
+        </button>
+    </div>
+    <div id="game-summary-container">
+        <h1>Game Summary</h1>
+        <table>
+            <tr>
+                <th>Wins</th>
+                <th>Loses</th>
+                <th>Ties</th>
+                <th>Games Played</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </table>
+        <div>
+            <div id="game-history-container">
+                <h1>Game History</h1>
+                <table>
+                    <tr>
+                        <th>#</th>
+                        <th>User Move</th>
+                        <th>Computer Move</th>
+                        <th>Result</th>
+                    </tr>
+                </table>
+                </table>
+            </div>
+</body>
+
+</html>
