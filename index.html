@@ -14,24 +14,22 @@
 <body>
     <h1>Rock Paper Scissors</h1>
     <div id="buttons-container">
-        <button onclick="userMove='Rock'; 
+        <button onclick=" captureUserMove('Rock'); 
         generateComputerMove();
         evaluateMoves();
-        console.log('userMove ${userMove} computerMove ${computerMove} result: ${result}') ;">
+        updateGameScore();
+        renderGameSummary();">
 
 
             <img src="resources/images/rock.png" alt="rock">
         </button>
-        <button
-            onclick="userMove='Paper'; generateComputerMove(); evaluateMoves(); console.log('userMove: ${userMove} computerMove: ${computerMove} result: ${result}' );">
+        <button onclick="captureUserMove('Paper'); generateComputerMove(); evaluateMoves(); renderGameSummary();">
             <img src="resources/images/paper.png" alt="paper">
         </button>
-        <button
-            onclick="userMove='Scissors'; generateComputerMove(); evaluateMoves(); console.log('userMove ${userMove} computerMove ${computerMove} result ${result}');">
+        <button onclick="captureUserMove('Scissors'); generateComputerMove(); evaluateMoves(); renderGameSummary()">
             <img src="resources/images/scissors.png" alt="scissors">
         </button>
-        <button
-            onclick="userMove='Reset'; generateComputerMove(); evaluateMoves(); console.log('userMove ${userMove} computerMove ${computerMove} result ${result}');">
+        <button onclick="captureUserMove('Reset'); generateComputerMove(); evaluateMoves(); renderGameSummary();">
             <img id="reset-img" src="resources/images/reset.jpg" alt="reset">
         </button>
     </div>
@@ -45,10 +43,10 @@
                 <th>Games Played</th>
             </tr>
             <tr>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
+                <td id="wins">0</td>
+                <td id="looses">0</td>
+                <td id="ties">0</td>
+                <td id="gamesplayed">0</td>
             </tr>
         </table>
         <div>
