@@ -4,64 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS Game</title>
     <link rel="icon" href="resources/images/favicon.ico">
     <link rel="stylesheet" href="resources/styles/rps.css">
-    <script src="resources/scripts/rps.js"></script>
-
-    <title>Rock Paper and Scissors </title>
 </head>
 
 <body>
-    <h1>Rock Paper Scissors</h1>
-    <div id="buttons-container">
-        <button onclick=" captureUserMove('Rock'); 
-        generateComputerMove();
+    <h1>Rock Paper Scissor</h1>
+    <div id="button-container">
+        <button onclick="
+        captureUserMove('Rock')
         evaluateMoves();
+        generateComputerMove();
         updateGameScore();
-        renderGameSummary();">
+        randomGameSummary();
+        renderGameHistory();
+         console.log(`userMove: ${userMove} computerMove ${computerMove} result: ${result}`);
+         "><img src="resources/images/rock.png" alt=""></button>
+        <button onclick="
+        captureUserMove('Paper')
+        evaluateMoves();
+        generateComputerMove();
+        updateGameScore();
+        randomGameSummary();
+        renderGameHistory();
+         console.log(`userMove: ${userMove} computerMove ${computerMove} result: ${result}`);
+         "><img src="resources/images/paper.png" alt=""></button>
+        <button onclick="
+        captureUserMove('Scissors')
+        evaluateMoves();
+        generateComputerMove();
+        updateGameScore();
+        randomGameSummary();
+        renderGameHistory();
+         console.log(`userMove: ${userMove} computerMove ${computerMove} result: ${result}`);
+         "><img src="resources/images/scissors.png" alt=""></button>
+        <button onclick="reset(); randomGameSummary();"><img id="reset-img" src="resources/images/reset.jpg"
+                alt=""></button>
 
-
-            <img src="resources/images/rock.png" alt="rock">
-        </button>
-        <button onclick="captureUserMove('Paper'); generateComputerMove(); evaluateMoves(); renderGameSummary();">
-            <img src="resources/images/paper.png" alt="paper">
-        </button>
-        <button onclick="captureUserMove('Scissors'); generateComputerMove(); evaluateMoves(); renderGameSummary()">
-            <img src="resources/images/scissors.png" alt="scissors">
-        </button>
-        <button onclick="captureUserMove('Reset'); generateComputerMove(); evaluateMoves(); renderGameSummary();">
-            <img id="reset-img" src="resources/images/reset.jpg" alt="reset">
-        </button>
     </div>
-    <div id="game-summary-container">
-        <h1>Game Summary</h1>
-        <table>
-            <tr>
-                <th>Wins</th>
-                <th>Loses</th>
-                <th>Ties</th>
-                <th>Games Played</th>
-            </tr>
-            <tr>
-                <td id="wins">0</td>
-                <td id="looses">0</td>
-                <td id="ties">0</td>
-                <td id="gamesplayed">0</td>
-            </tr>
-        </table>
-        <div>
-            <div id="game-history-container">
-                <h1>Game History</h1>
-                <table>
-                    <tr>
-                        <th>#</th>
-                        <th>User Move</th>
-                        <th>Computer Move</th>
-                        <th>Result</th>
-                    </tr>
-                </table>
-                </table>
-            </div>
+    <h1>Game summary</h1>
+    <table>
+        <tr>
+            <th>Wins</th>
+            <th>Losess</th>
+            <th>Ties</th>
+            <th>Game Played</th>
+        </tr>
+        <tr>
+            <td id="win">0</td>
+            <td id="looses">0</td>
+            <td id="ties">0</td>
+            <td id="gamePlayed">0</td>
+        </tr>
+    </table>
+    <h1>Game History</h1>
+    <table id='gameHistory'>
+        <tr>
+            <th>#</th>
+            <th>User Move</th>
+            <th>Computer Move</th>
+            <th>Result</th>
+        </tr>
+    </table>
+    <script src="resources/scripts/rps.js">
+
+    </script>
 </body>
 
 </html>

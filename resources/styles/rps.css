@@ -4,13 +4,18 @@ body {
 
 button img {
     border-radius: 50%;
+    height: 100px;
     width: 100px;
+}
+
+#reset-img {
+    height: 50px;
+    width: 50px;
 }
 
 button {
     background-color: transparent;
-    border: none;
-
+    border: none
 }
 
 table th {
@@ -19,17 +24,20 @@ table th {
 }
 
 table td {
-    background-color: wheat;
+    background-color: white;
 }
 
-#reset-img {
-    height: 50px;
-    width: 50px;
-}
-
-#buttons-container,
-#game-summary-container {
+#button-container {
     display: flex;
     justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
     align-items: center;
+    text-align: center;
 }
