@@ -3,13 +3,13 @@ let userMove = '';
 let computerMove = '';
 
 let result = '';
-const game = JSON.parse(localStorage.getItem('game')) || {
+let game = JSON.parse(localStorage.getItem('game')) || {
     win: 0,
     looses: 0,
     ties: 0
 };
 // let gameHistory = [];
-const gameHistory = JSON.parse(localStorage.getItem('gameHistory')) || [];
+let gameHistory = JSON.parse(localStorage.getItem('gameHistory')) || [];
 renderGameHistory();
 randomGameSummary();
 function captureUserMove(move) {
@@ -91,4 +91,5 @@ function reset() {
     game.win = 0,
         game.looses = 0,
         game.ties = 0
+    gameHistory = [];
 }
